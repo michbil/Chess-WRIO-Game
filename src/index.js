@@ -1,6 +1,6 @@
 "use strict";
 
-var Titter = new(require('./server/app.js'))(),
+const ChessService = new(require('./server/app.js'))(),
     nconf = require('./server/wrio_nconf.js'),
     express = require('express'),
     app = express(),
@@ -117,14 +117,14 @@ db.mongo({
 
                 console.log("Application Started!");
 
-                Titter.init({
+                ChessService.init({
                     db: db
                 }, function(err) {
                     if (err) {
                         console.log(err);
                     } else {
                         setInterval(function() {
-                            Titter.searchAndReply();
+                            ChessService.searchAndReply();
                         }, 1 * 10 * 1000);
                     }
                 })

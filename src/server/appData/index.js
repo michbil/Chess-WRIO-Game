@@ -20,7 +20,7 @@ exports.init = function(args, cb) {
                 console.log('App data:', err.message);
             });
     });
-}
+};
 
 setInterval(function() {
     utils.sendAppData(appData);

@@ -14,7 +14,7 @@ var twconf = {
     _callback: nconf.get("api:twitterLogin:_callback")
 };
 
-var titterUrl = 'https://titter' + nconf.get("server:workdomain");
+var titterUrl = 'http://titter:5001';
 //var titterUrl = '127.0.0.1:5003';
 
 exports.search = function(args) {

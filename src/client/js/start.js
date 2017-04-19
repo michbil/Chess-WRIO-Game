@@ -151,4 +151,4 @@ class Start extends React.Component {
 
 }
 
-ReactDom.render( < Start / > , document.getElementById('startholder'));
+ReactDom.render( < Start /> , document.getElementById('startholder'));
